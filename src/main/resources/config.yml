@@ -1,0 +1,55 @@
+# ============================================================
+#  KapomUI  -  Tab list + Left sidebar
+#  Colors: &a legacy codes and &#RRGGBB hex codes both work.
+#
+#  Placeholders (everywhere):
+#    {server} {title} {line} {online} {max} {uptime}
+#    {ram_used} {ram_max} {ram_percent} {ram_bar}
+#    {player} {ping} {ping_color} {playtime}
+#    {kills} {deaths} {wins} {losses}
+#  {title} = animated gradient server name, {line} = gradient divider
+# ============================================================
+
+server-name: KAPOM
+
+theme:
+  # gradient colors (cyan -> violet -> pink)
+  colors: ["#00E5FF", "#7C4DFF", "#FF4DD2"]
+  animate: true
+  animation-seconds: 4
+
+# how often everything refreshes (20 ticks = 1 second)
+update-ticks: 5
+
+tab:
+  enabled: true
+  header:
+    - ""
+    - "&3✦ {title} &3✦"
+    - "{line}"
+    - "&7Players Online &8» &f{online}&7/{max}"
+    - ""
+  footer:
+    - ""
+    - "&7Server Uptime &8» &f{uptime}"
+    - "&7Memory &8» {ram_bar} &f{ram_used}&7/&f{ram_max} MB &8(&7{ram_percent}%&8)"
+    - "{line}"
+    - ""
+  # how every player looks in the tab list: [name] [ping]
+  player-format: "&f{player} &8┃ {ping_color}{ping}&7ms"
+
+sidebar:
+  enabled: true
+  title: "&3✦ {title} &3✦"
+  # max 15 lines
+  lines:
+    - "&8━━━━━━━━━━━━━━━━━━"
+    - "&b▸ &7Server &8» &f&l{server}"
+    - "&b▸ &7Player &8» &f{player}"
+    - "&b▸ &7Playtime &8» &f{playtime}"
+    - ""
+    - "&d▸ &7Kills / Deaths &8» &a{kills}&7 / &c{deaths}"
+    - "&d▸ &7Duel Win / Loss &8» &a{wins}&7 / &c{losses}"
+    - ""
+    - "&b▸ &7Online &8» &f{online}&7/{max}"
+    - "&8━━━━━━━━━━━━━━━━━━"

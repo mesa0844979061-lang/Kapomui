@@ -1,0 +1,14 @@
+name: KapomUI
+version: 1.0.0
+main: com.kapomui.KapomUIPlugin
+api-version: '1.21'
+softdepend: [KitDuel]
+description: KAPOM Tab list + left sidebar scoreboard
+commands:
+  kapomui:
+    description: KapomUI commands
+    aliases: [kui, kapom]
+    usage: /kapomui <reload|sidebar>
+permissions:
+  kapomui.admin:
+    default: op
